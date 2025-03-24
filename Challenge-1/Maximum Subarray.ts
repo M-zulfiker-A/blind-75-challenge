@@ -1,0 +1,10 @@
+function maxSubArray(nums: number[]): number {
+    let currSum = nums[0]
+    let maxSum = currSum
+    for(let i = 1; i< nums.length; i++){
+        currSum =  Math.max(nums[i], (currSum + nums[i]))
+        maxSum = Math.max(maxSum, currSum)
+    }
+    return maxSum
+    
+};
